@@ -248,6 +248,8 @@
 \nEmparelhado com Desativar Favoritos e Recentes.</string>
     <string name="EnableStickerPin">Ativar fixação de sticker</string>
     <string name="ArchiveFiles">Arquivos mortos</string>
+    <string name="ForceVideoStreaming">Forçar streaming de vídeo</string>
+    <string name="ForceVideoStreamingAbout">Sempre faça streaming dos vídeos em vez de baixá-los.</string>
     <string name="Win32ExecutableFiles">Arquivos executáveis do Windows</string>
     <string name="AutoDownload">Download Automático</string>
     <string name="DeleteDownloadedFileSucceed">Excluído</string>
