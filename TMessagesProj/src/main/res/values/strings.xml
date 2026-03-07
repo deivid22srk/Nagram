@@ -2612,6 +2612,7 @@
     <string name="AutodownloadSizeLimitUpTo">up to %1$s</string>
     <string name="Streaming">Streaming</string>
     <string name="EnableStreaming">Stream Videos and Audio Files</string>
+    <string name="ForceVideoStreaming">Force Video Streaming</string>
     <string name="EnableAllStreamingInfo">Some videos can\'t be streamed – e.g., all videos that were sent from Android using Telegram 4.7 and earlier versions.\n</string>
     <string name="TapToChangePhone">Tap to change phone number</string>
     <string name="ShowNotificationsFor">Show notifications for</string>
@@ -10371,7 +10372,7 @@
     <string name="GiftCraftInfoFeature2Title">Maximize Chances</string>
     <string name="GiftCraftInfoFeature2Text">Combine more gifts to increase your odds of success.</string>
     <string name="GiftCraftInfoFeature3Title">Affect the Result</string>
-    <string name="GiftCraftInfoFeature3Text">Use gifts with the same attribute to boost its chance.</string>
+</resources>
     <string name="GiftCraftInfoButton">Start Crafting</string>
     <string name="GiftCraftLaterTitle">Try Later</string>
     <string name="GiftCraftLaterText">You will be able to craft this gift %s.</string>

@@ -708,8 +708,9 @@ public class DownloadController extends BaseController implements NotificationCe
         }
         TLRPC.Message msg = message.messageOwner;
         int type;
+        boolean isVideoMessage = MessageObject.isVideoMessage(msg);
         boolean isVideo;
-        if ((isVideo = MessageObject.isVideoMessage(msg)) || MessageObject.isGifMessage(msg) || MessageObject.isRoundVideoMessage(msg) || MessageObject.isGameMessage(msg)) {
+        if ((isVideo = isVideoMessage) || MessageObject.isGifMessage(msg) || MessageObject.isRoundVideoMessage(msg) || MessageObject.isGameMessage(msg)) {
             type = AUTODOWNLOAD_TYPE_VIDEO;
         } else if (MessageObject.isVoiceMessage(msg)) {
             type = AUTODOWNLOAD_TYPE_AUDIO;
@@ -720,6 +721,10 @@ public class DownloadController extends BaseController implements NotificationCe
         } else {
             return 0;
         }
+        if (isVideoMessage && SharedConfig.streamAllVideo) {
+            return 0;
+        }
+
         int index;
         TLRPC.Peer peer = msg.peer_id;
         if (peer != null) {
@@ -798,8 +803,9 @@ public class DownloadController extends BaseController implements NotificationCe
         }
         TLRPC.Message msg = message.messageOwner;
         int type;
+        boolean isVideoMessage = MessageObject.isVideoMessage(msg);
         boolean isVideo;
-        if ((isVideo = MessageObject.isVideoMessage(msg)) || MessageObject.isGifMessage(msg) || MessageObject.isRoundVideoMessage(msg) || MessageObject.isGameMessage(msg)) {
+        if ((isVideo = isVideoMessage) || MessageObject.isGifMessage(msg) || MessageObject.isRoundVideoMessage(msg) || MessageObject.isGameMessage(msg)) {
             type = AUTODOWNLOAD_TYPE_VIDEO;
         } else if (MessageObject.isVoiceMessage(msg)) {
             type = AUTODOWNLOAD_TYPE_AUDIO;
@@ -810,6 +816,10 @@ public class DownloadController extends BaseController implements NotificationCe
         } else {
             return 0;
         }
+        if (isVideoMessage && SharedConfig.streamAllVideo) {
+            return 0;
+        }
+
         int index;
         TLRPC.Peer peer = msg.peer_id;
         if (peer != null) {
@@ -889,8 +899,9 @@ public class DownloadController extends BaseController implements NotificationCe
         // --- AyuGram hook
 
         int type;
+        boolean isVideoMessage = MessageObject.isVideoMessage(message);
         boolean isVideo;
-        if ((isVideo = MessageObject.isVideoMessage(message)) || MessageObject.isGifMessage(message) || MessageObject.isRoundVideoMessage(message) || MessageObject.isGameMessage(message)) {
+        if ((isVideo = isVideoMessage) || MessageObject.isGifMessage(message) || MessageObject.isRoundVideoMessage(message) || MessageObject.isGameMessage(message)) {
             type = AUTODOWNLOAD_TYPE_VIDEO;
         } else if (MessageObject.isVoiceMessage(message)) {
             type = AUTODOWNLOAD_TYPE_AUDIO;
@@ -901,6 +912,10 @@ public class DownloadController extends BaseController implements NotificationCe
         } else {
             return 0;
         }
+        if (isVideoMessage && SharedConfig.streamAllVideo) {
+            return 0;
+        }
+
         int index;
         TLRPC.Peer peer = message.peer_id;
         if (peer != null) {
@@ -970,8 +985,10 @@ public class DownloadController extends BaseController implements NotificationCe
             return canPreloadStories() ? 2 : 0;
         }
         int type;
+        boolean isVideoMessage = false;
         boolean isVideo = false;
         if (MessageObject.isVideoDocument(media.document)) {
+            isVideoMessage = true;
             isVideo = true;
             type = AUTODOWNLOAD_TYPE_VIDEO;
         } else if (MessageObject.isVoiceDocument(media.document)) {
@@ -983,6 +1000,10 @@ public class DownloadController extends BaseController implements NotificationCe
         } else {
             return 0;
         }
+        if (isVideoMessage && SharedConfig.streamAllVideo) {
+            return 0;
+        }
+
         int index;
         TLRPC.Peer peer = message.peer_id;
         if (peer != null) {
