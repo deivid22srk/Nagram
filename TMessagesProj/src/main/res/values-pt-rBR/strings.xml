@@ -654,6 +654,7 @@
     <string name="AutodownloadSizeLimitUpTo">até %1$s</string>
     <string name="Streaming">Streaming</string>
     <string name="EnableStreaming">Streaming de Música e Vídeo</string>
+    <string name="ForceVideoStreaming">Forçar streaming de vídeo</string>
     <string name="EnableAllStreamingInfo">Quando possível, o Telegram tocará vídeos e músicas imediatamente, sem esperar que os arquivos baixem completamente.</string>
     <string name="TapToChangePhone">Toque para alterar o número de telefone</string>
     <string name="ShowNotificationsFor">Mostrar notificações de</string>
