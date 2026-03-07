@@ -9017,7 +9017,7 @@
     <string name="BotFileDownloadOpen">Open</string>
     <string name="BotFileDownloadCancel">Cancel</string>
     <string name="StoreCollageRetake">Retake</string>
-    <string name="Percent">%d%</string>
+    <string name="Percent">%d%%</string>
     <string name="AffiliateProgramBot">Affiliate Program</string>
     <string name="AffiliateProgramBotOff">Off</string>
     <string name="BotAffiliateProgramTitle">Affiliate Program</string>
@@ -10107,9 +10107,9 @@
     <string name="Gift2ActiveAuctionsActiveStatusOutbid">You\'ve been outbid.</string>
     <string name="Gift2ActiveAuctionsActiveStatusEarly">You\'ve placed an early bid.</string>
 
-    <string name="Gift2ActiveAuctionsActiveRound">Round %s of %s</string>
+    <string name="Gift2ActiveAuctionsActiveRound">Round %1$s of %2$s</string>
     <string name="Gift2ActiveAuctionsActiveRaiseBid">Raise Bid</string>
-    <string name="Gift2ActiveAuctionsActiveBidActive">Your bid **%s** is ranked **#%d**</string>
+    <string name="Gift2ActiveAuctionsActiveBidActive">Your bid **%1$s** is ranked **#%2$d**</string>
     <string name="Gift2ActiveAuctionsActiveBidOutbid">Your bid **%s** is outbid</string>
     <string name="Gift2AuctionsItemsBought2_one">%1$d %2$s item bought ></string>
     <string name="Gift2AuctionsItemsBought2_other">%1$d %2$s items bought ></string>
@@ -10178,7 +10178,7 @@
     <string name="GiftOfferRowValue">Value</string>
     <string name="GiftOfferRowDuration">Duration</string>
     <string name="GiftOfferPay">Pay ⭐️%s</string>
-    <string name="GiftOfferPayMulti">Pay %s and %s</string>
+    <string name="GiftOfferPayMulti">Pay %1$s and %2$s</string>
     <string name="GiftOfferPayMultiPart">⭐️%s</string>
     <string name="GiftOfferSellFor">Sell for ⭐️%s</string>
     <string name="GiftOfferAmount">⭐️ %s</string>
