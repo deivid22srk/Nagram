@@ -9336,7 +9336,7 @@ public class MessageObject {
         if (document == null || document instanceof TLRPC.TL_documentEncrypted) {
             return false;
         }
-        if (SharedConfig.streamAllVideo) {
+        if (SharedConfig.streamAllVideo || tw.nekomimi.nekogram.NekoConfig.forceVideoStreaming.Bool()) {
             return true;
         }
         for (int a = 0; a < document.attributes.size(); a++) {

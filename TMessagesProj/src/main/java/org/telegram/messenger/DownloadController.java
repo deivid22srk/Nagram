@@ -784,6 +784,9 @@ public class DownloadController extends BaseController implements NotificationCe
         } else {
             size = MessageObject.getMessageSize(msg);
         }
+        if (isVideo && tw.nekomimi.nekogram.NekoConfig.forceVideoStreaming.Bool()) {
+            return 0;
+        }
         if (isVideo && preset.preloadVideo && size > maxSize && maxSize > 2 * 1024 * 1024) {
             return (mask & type) != 0 ? 2 : 0;
         } else {
@@ -867,6 +870,9 @@ public class DownloadController extends BaseController implements NotificationCe
             maxSize = preset.sizes[typeToIndex(type)];
         }
         final long size = overrideSize;
+        if (isVideo && tw.nekomimi.nekogram.NekoConfig.forceVideoStreaming.Bool()) {
+            return 0;
+        }
         if (isVideo && preset.preloadVideo && size > maxSize && maxSize > 2 * 1024 * 1024) {
             return (mask & type) != 0 ? 2 : 0;
         } else {
@@ -958,6 +964,9 @@ public class DownloadController extends BaseController implements NotificationCe
             maxSize = preset.sizes[typeToIndex(type)];
         }
         long size = MessageObject.getMessageSize(message);
+        if (isVideo && tw.nekomimi.nekogram.NekoConfig.forceVideoStreaming.Bool()) {
+            return 0;
+        }
         if (isVideo && preset.preloadVideo && size > maxSize && maxSize > 2 * 1024 * 1024) {
             return (mask & type) != 0 ? 2 : 0;
         } else {
@@ -1040,6 +1049,9 @@ public class DownloadController extends BaseController implements NotificationCe
             maxSize = preset.sizes[typeToIndex(type)];
         }
         long size = MessageObject.getMediaSize(media);
+        if (isVideo && tw.nekomimi.nekogram.NekoConfig.forceVideoStreaming.Bool()) {
+            return 0;
+        }
         if (isVideo && preset.preloadVideo && size > maxSize && maxSize > 2 * 1024 * 1024) {
             return (mask & type) != 0 ? 2 : 0;
         } else {

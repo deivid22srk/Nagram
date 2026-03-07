@@ -195,6 +195,7 @@ public class NekoConfig {
     public static ConfigItem customAudioBitrate = addConfig("customAudioBitrate", configTypeInt, 32);
     public static ConfigItem disableGroupVoipAudioProcessing = addConfig("disableGroupVoipAudioProcessing", configTypeBool, false);
     public static ConfigItem enhancedFileLoader = addConfig("enhancedFileLoader", configTypeBool, false);
+    public static ConfigItem forceVideoStreaming = addConfig("ForceVideoStreaming", configTypeBool, false);
     public static ConfigItem useOSMDroidMap = addConfig("useOSMDroidMap", configTypeBool, false);
     public static ConfigItem mapDriftingFixForGoogleMaps = addConfig("mapDriftingFixForGoogleMaps", configTypeBool, true);
 
